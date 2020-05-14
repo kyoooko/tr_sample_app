@@ -3,7 +3,7 @@
   <head>
   <%# title、HomeのときHome｜表示されないようにapp/helpers/application_helper.rbでカスタムヘルパーfull_title定義し、どちらでも対応できるようにした %>
     <title><%= full_title(yield(:title)) %></title>
-    <%= render 'layouts/shim' %>
+   <%= render 'layouts/rails_default' %>
     <%= render 'layouts/shim' %>
   </head>
 
