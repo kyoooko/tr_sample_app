@@ -5,7 +5,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
     # 5-4-2でget users_new_urlを下記に書き換え
     get signup_path
-
     assert_response :success
   end
 
