@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   # 演習get  '/help',    to: 'static_pages#help', as: "helf"
   get  '/about',   to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
-
-  # 5-4-2でget 'users/new'を下記に書き換え
+  # 5-4-2でget 'users/new'を下記に書き換え/また/users/newと/signupどっちでもサインアップページ表示
   get  '/signup',    to: 'users#new'
+  post '/signup',  to: 'users#create'
+  resources :users
   
 end
