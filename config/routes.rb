@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-    # root 'static_pages#home'
+
+  # root 'static_pages#home'
   # get 'static_pages/contact'
   # get 'static_pages/home'
   # get 'static_pages/help'
@@ -14,6 +15,11 @@ Rails.application.routes.draw do
   # 5-4-2でget 'users/new'を下記に書き換え/また/users/newと/signupどっちでもサインアップページ表示
   get  '/signup',    to: 'users#new'
   post '/signup',  to: 'users#create'
+
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+
   resources :users
   
 end
